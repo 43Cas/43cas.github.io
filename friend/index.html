@@ -151,7 +151,19 @@
                     <div class="friend-right">
                         <p class="friend-name">kinpei</p>
                         <div class="friend-about">
-                            <p>friend 主题</p>
+                            <p>friend</p>
+                        </div>
+                    </div>
+                </a>
+            
+                <a class="friend-card" target="_blank" href="https://space.bilibili.com/1280327643/favlist?fid=2225410043&ftype=create">
+                    <div class="friend-left">
+                        <img class="avatar" src="/image/website/lazyload.svg" data-original="/image/friend/bins.jpg"> 
+                    </div>
+                    <div class="friend-right">
+                        <p class="friend-name">bins</p>
+                        <div class="friend-about">
+                            <p>friend</p>
                         </div>
                     </div>
                 </a>
@@ -270,33 +282,10 @@
     <div class="progressbar-top"></div>
 
     
-        <div class="aplayer"></div>
         <link type="text/css" rel="stylesheet" href="/css/APlayer.css">
         <script type="text/javascript" src="/js/APlayer.min.js"></script>
-        <script type="text/javascript">
-            const aplayer = new APlayer({
-                container: document.querySelector(".aplayer"),
-                fixed: true,
-                autoplay: false,
-                loop: "all",
-                order: "random",
-                preload: "auto",
-                volume: 0.67,
-                mutex: true,
-                lrcType: 3,
-                audio: [
-                    
-                        {
-                            name: "Endless Tears",
-                            artist: "CLIFF EDGE",
-                            cover: "/music/cover/Endless Tears.jpg",
-                            url: "/music/song/Endless Tears.mp3",
-                            lrc: "/music/lrc/Endless Tears.lrc"
-                        },
-                    
-                ]
-            });
-        </script>
+        <script type="text/javascript" src="/js/Meting.min.js"></script>
+        <meting-js id="8258127443" lrcshow="false" server="netease" type="playlist" fixed="true" autoplay="true" loop="all" order="random" preload="auto" volume="0.67" mutex="true"></meting-js>
     
     
     <div class="wrap-right">
@@ -423,7 +412,7 @@
             
         ],
 
-        OtherBannerText : "",
+        OtherBannerText : "欢迎！",
 
         Error : {
             icon    : "icon-swimming",
@@ -682,7 +671,7 @@
         },
 
         Music : {
-            type : "APlayer"
+            type : "Meting"
         },
         APlayer : {
             container : ".aplayer",
@@ -707,10 +696,10 @@
             ]
         },
         Meting : {
-            id       : "27138900", 
+            id       : "8258127443", 
             lrcshow  : false, 
             server   : "netease", 
-            type     : "song", 
+            type     : "playlist", 
             fixed    : true, 
             autoplay : true, 
             loop     : "all", 
