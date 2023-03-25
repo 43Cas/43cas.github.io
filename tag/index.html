@@ -97,15 +97,7 @@
                     
                         <li class=" active "><a href="/tag" class="" target="_self"><span class="iconfont icon-discount-fill"></span>标签</a></li>
                     
-                        <li class=""><a href="/archive" class="" target="_self"><span class="iconfont icon-calendar-fill"></span>归档</a></li>
-                    
-                        <li class=""><a href="/donate" class="" target="_self"><span class="iconfont icon-heart-fill"></span>赞赏</a></li>
-                    
                         <li class=""><a href="/about" class="" target="_self"><span class="iconfont icon-about-fill"></span>关于</a></li>
-                    
-                        <li class=""><a href="/atom.xml" class="" target="_blank"><span class="iconfont icon-rss"></span>订阅</a></li>
-                    
-                        <li class=""><a href="javascript:;" class="search" target="_self"><span class="iconfont icon-search-menu"></span>搜索</a></li>
                     
                         <li class=""><a href="/comment" class="" target="_self"><span class="iconfont icon-comments-fill"></span>留言板</a></li>
                     
@@ -167,10 +159,33 @@
     <div class="progressbar-top"></div>
 
     
+        <div class="aplayer"></div>
         <link type="text/css" rel="stylesheet" href="/css/APlayer.css">
         <script type="text/javascript" src="/js/APlayer.min.js"></script>
-        <script type="text/javascript" src="/js/Meting.min.js"></script>
-        <meting-js id="3778678" lrcshow="false" server="netease" type="playlist" fixed="true" autoplay="false" loop="all" order="random" preload="auto" volume="0.67" mutex="true"></meting-js>
+        <script type="text/javascript">
+            const aplayer = new APlayer({
+                container: document.querySelector(".aplayer"),
+                fixed: true,
+                autoplay: false,
+                loop: "all",
+                order: "random",
+                preload: "auto",
+                volume: 0.67,
+                mutex: true,
+                lrcType: 3,
+                audio: [
+                    
+                        {
+                            name: "Endless Tears",
+                            artist: "CLIFF EDGE",
+                            cover: "/music/cover/Endless Tears.jpg",
+                            url: "/music/song/Endless Tears.mp3",
+                            lrc: "/music/lrc/Endless Tears.lrc"
+                        },
+                    
+                ]
+            });
+        </script>
     
     
     <div class="wrap-right">
@@ -356,47 +371,11 @@
                 },
             
                 {
-                    name   : "归档",
-                    icon   : "icon-calendar-fill",
-                    href   : "/archive",
-                    type   : "archive",
-                    class  : "",
-                    target : "_self"
-                },
-            
-                {
-                    name   : "赞赏",
-                    icon   : "icon-heart-fill",
-                    href   : "/donate",
-                    type   : "donate",
-                    class  : "",
-                    target : "_self"
-                },
-            
-                {
                     name   : "关于",
                     icon   : "icon-about-fill",
                     href   : "/about",
                     type   : "about",
                     class  : "",
-                    target : "_self"
-                },
-            
-                {
-                    name   : "订阅",
-                    icon   : "icon-rss",
-                    href   : "/atom.xml",
-                    type   : "",
-                    class  : "",
-                    target : "_blank"
-                },
-            
-                {
-                    name   : "搜索",
-                    icon   : "icon-search-menu",
-                    href   : "javascript:;",
-                    type   : "",
-                    class  : "search",
                     target : "_self"
                 },
             
@@ -560,11 +539,11 @@
 
         Valine : {
             el             : ".comments-content",
-            appId          : "AsC3eL4cWwYipIIEi8bJAk2a-MdYXbMMI",
-            appKey         : "P6Qpsz3FAmCN1QqpJpG1Wpb4",
-            serverURLs     : "https://43cas.github.io",
-            placeholder    : "你是我一生只会遇见一次的惊喜...",
-            avatar         : "mm",
+            appId          : "feSAfl71kTwNV4x1wBG9xf4q-gzGzoHsz",
+            appKey         : "MESU2pc3lMOtdrEYKFw3Nvqj",
+            serverURLs     : "",
+            placeholder    : "请留言...",
+            avatar         : "hide",
             meta           : "nick,mail,link",
             requiredFields : "nick,mail",
             pageSize       : 5,
@@ -592,7 +571,7 @@
         },
 
         Music : {
-            type : "Meting"
+            type : "APlayer"
         },
         APlayer : {
             container : ".aplayer",
@@ -617,12 +596,12 @@
             ]
         },
         Meting : {
-            id       : "3778678", 
+            id       : "27138900", 
             lrcshow  : false, 
             server   : "netease", 
-            type     : "playlist", 
+            type     : "song", 
             fixed    : true, 
-            autoplay : false, 
+            autoplay : true, 
             loop     : "all", 
             order    : "random", 
             preload  : "auto", 
